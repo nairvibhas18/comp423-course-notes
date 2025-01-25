@@ -18,17 +18,17 @@ Before we start, make sure you have:
 ### Step 1: Create a Local Directory and Initialize Git
 A. Open your terminal or command prompt
 B. Create a new directory for your project:
-'''bash 
+```bash 
 mkdir go-setup-tutorial
 cd go-setup-tutorial
-'''
+```
 C. Initialize a new Git repository:
-'''bash
+```bash
 git init
-'''
+```
 D. Create a README.md file: 
-'''bash
+```bash
 echo "# Go Setup Tutorial" > README.md
 git add README.md
 git commit -m "Initial commit with README"
-'''
+```
