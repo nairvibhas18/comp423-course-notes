@@ -1,7 +1,15 @@
 # Setting up a dev container for Go
-* Primary Author: [<Vibhas Nair>] (https://github.com/nairvibhas18)
+* Primary Author: [Vibhas Nair](https://github.com/nairvibhas18)
 
 ## Welcome!
 Welcome to this tutorial! Here, you will learn how to create a simple project in the Go 
 programming language. By the end of this tutorial, you will have created a basic Go
 development container and a blank repository to track changes you make to your code.
+
+## Prerequisites 
+Before we start, make sure you have:
+- **A GitHub account**: If you don’t have one yet, sign up at [GitHub](https://github.com/).
+- **Git Installed**: [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) if you don't already have it
+- **Visual Studio Code (VS Code)**: Download and install it from [here](https://code.visualstudio.com/).
+- **Docker Installed**: This is required to run the dev container. Install it [here](https://www.docker.com/products/docker-desktop/).
+- **Command-line basics**: Basic command line interface (CLI) commands will be necessary for this tutorial. This [link](https://aws.amazon.com/what-is/cli/#:~:text=A%20command%20line%20interface%20(CLI)%20is%20a%20text%2Dbased,operating%20system%20and%20the%20user.) provides a great tutorial if you need to brush up on your basics.
