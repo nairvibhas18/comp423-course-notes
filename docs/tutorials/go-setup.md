@@ -17,6 +17,7 @@ Before we start, make sure you have:
 ## Project Setup: Creating the Repository
 ### Step 1: Create a Local Directory and Initialize Git
 A. Open your terminal or command prompt
+
 B. Create a new directory for your project:
 ```bash 
 mkdir go-setup-tutorial
