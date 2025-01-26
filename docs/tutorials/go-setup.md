@@ -1,12 +1,16 @@
 # Setting up a dev container for Go
+
 * Primary Author: [Vibhas Nair](https://github.com/nairvibhas18)
+* Reviewer: [Olawumi Olasunkanmi](https://github.com/wumirose)
 
 ## Welcome!
-Here, you will learn how to create a simple project in the Go 
+
+Here, you will learn how to create a simple project in the [Go](https://go.dev/)
 programming language. By the end of this tutorial, you will have created a basic Go
 development container and a blank repository to track changes you make to your code.
 
 ## Part 0: Prerequisites 
+
 Before we start, make sure you have:
 - **A GitHub account**: If you don’t have one yet, sign up at [GitHub](https://github.com/).
 - **Git Installed**: [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) if you don't already have it
@@ -15,7 +19,9 @@ Before we start, make sure you have:
 - **Command-line basics**: Basic command line interface (CLI) commands will be necessary for this tutorial. This [link](https://aws.amazon.com/what-is/cli/#:~:text=A%20command%20line%20interface%20(CLI)%20is%20a%20text%2Dbased,operating%20system%20and%20the%20user.) provides a great tutorial if you need to brush up on your basics.
 
 ## Part 1: Project Setup: Creating the Repository
+
 ### Step 1: Create a Local Directory and Initialize Git
+
 A. Open your terminal or command prompt.
 
 B. Create a new directory for your project:
@@ -35,6 +41,7 @@ git commit -m "Initial commit with README"
 ```
 
 ### Step 2: Create a Remote Repository on GitHub
+
 1. Log in to your GitHub account and navigate to the [Create a New Repository](https://github.com/new) page.
 2. Fill in the details as follows:
     - **Repository Name**: go-setup-tutorial
@@ -45,6 +52,7 @@ git commit -m "Initial commit with README"
 3. Click **Create Repository**
 
 ### Step 3: Link your Local Repository to GitHub
+
 1. Add the GitHub repository as a remote:
 ```bash 
 git remote add origin https://github.com/<your-username>/go-setup-tutorial.git
@@ -59,16 +67,20 @@ git push --set-upstream origin main
 ```
 > [!Note]
 > The `-u` short flag also works in the place of `--set-upstream`
+
 4. In your web browser, refresh your GitHub repository to verify that the commit you made locally has been successfully pushed to the remote repository. You can run `git log` locally to view the commit ID and message, which should match the most recent commit displayed on GitHub. This confirms that your changes have been pushed to the remote repository.
 
 ## Part 2: Setting Up the Development Environment 
+
 ### What is a Development (Dev) Container?
+
 A development (dev) container is a preconfigured environment designed to ensure consistency across different machines. Essentially, it's a "mini computer" within your computer, equipped with everything you need for a specific project—such as the appropriate programming language, tools, libraries, and dependencies. Dev containers are typically set up using Docker to create isolated and reliable development environments.
 In the tech industry, complex projects often rely on specific tools and dependencies to function correctly. Without a dev container, each developer must manually configure their environment, which can lead to errors, inconsistencies, and wasted time. Dev containers solve this problem by providing an identical setup for everyone on the team, eliminating the infamous "it works on my machine" issues. They also make onboarding easier, enabling new team members to start contributing quickly with minimal setup.
 
 Let's create our development container:
 
 ### Step 1: Add Development Container Configuration 
+
 1. In VS Code, open the `go-setup-tutorial` directory. 
 > [!Tip]
 > You can do this by clicking File > Open Folder. 
@@ -85,7 +97,7 @@ Inside the `devcontainer.json` file we need to specify the configuration of our 
 > [!Note]
 > This simple project currently doesn't have any dependencies that we would need to install, but if we did, we would need to create a Go dependency configuration file, like `requirements.txt.` which would be created in the root directory, that would list all of the dependencies we would need for the project. We would then need to install these dependencies after the dev container is created by specifying a command in the `postCreateCommand` variable. 
 
-```bash
+```go
 {
   "name": "Go Dev Container",
   "image": "mcr.microsoft.com/vscode/devcontainers/go:latest",
@@ -115,7 +127,7 @@ go mod init example/hello423
 
 ### Step 2: Create a Go File and Paste Code
 Create a file in VS Code called `hello423.go` to write your code. Next, paste the following code into your `hello423.go` file and save the file:
-```bash
+```go
 package main
 
 import "fmt"
