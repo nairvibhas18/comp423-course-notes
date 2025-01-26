@@ -117,10 +117,12 @@ go mod init example/hello423
 Create a file in VS Code called `hello423.go` to write your code. Next, paste the following code into your `hello423.go` file and save the file:
 ```bash
 package main
+
 import "fmt"
+
 func main() {
     fmt.Println("Hello COMP423!")
-    }
+}
 ```
 
 ### Step 3: Run Your Code
@@ -128,9 +130,29 @@ Run your code using this command:
 ```bash
 go run .
 ```
-The output should be Hello COMP423!
+The output should be: Hello COMP423!
 
-Alternatively, 
+Alternatively, you can use `go build` to compile your code and run the generated binary executable file, in this case `./hello.go`, at any time: 
+```bash
+go build hello.go
+./hello.go
+```
+The output should similarly be: Hello COMP423!
 
-!!! note "`go run` vs `go build`"
-    The difference is  
+> [!Note]
+> `go run` compiles and executes your Go code in a specified file. This compilation happens in a temporary location, and the resulting executable is not saved. This makes `go run` ideal for testing small programs, quick iterations, or learning Go, as it avoids creating unnecessary binary files.
+> `go build` compiles the Go source code and its dependencies, producing a binary executable file in the current directory. Unlike `go run`, `go build` does not execute the code. It is useful for creating permanent, reusable executables for applications or projects that need to be run repeatedly or distributed. The output file allows you to run the program later without recompiling the source code.
+
+## Step 4: Add Your Changes to VS Code
+1. Stage and commit your changes to your remote repository on GitHub:
+```bash
+git add .
+git commit -m "Hello423 Code"
+```
+2. Push your changes:
+```bash 
+git push origin main
+```
+
+## Conclusion
+Congratulations! If you've made it this far, then you have a working development environment in Go and have run some simple code in VS Code. This skill can be applied to other languages as well, and is common practice in professional settings and open source projects.  
