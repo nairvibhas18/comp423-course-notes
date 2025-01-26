@@ -16,7 +16,7 @@ Before we start, make sure you have:
 
 ## Project Setup: Creating the Repository
 ### Step 1: Create a Local Directory and Initialize Git
-A. Open your terminal or command prompt
+A. Open your terminal or command prompt.
 
 B. Create a new directory for your project:
 ```bash 
@@ -33,3 +33,13 @@ echo "# Go Setup Tutorial" > README.md
 git add README.md
 git commit -m "Initial commit with README"
 ```
+
+### Step 2: Create a Remote Repository on GitHub
+1. Log in to your GitHub account and navigate to the [Create a New Repository](https://github.com/new) page.
+2. Fill in the details as follows:
+ - **Repository Name**: go-setup-tutorial
+ - **Description**: "A basic tutorial for setting up a project in the Go programming language."
+ - **Visibility**: Public 
+3. Do not initialize the repository with a README, .gitignore, or license.
+4. Click **Create Repository**
+
