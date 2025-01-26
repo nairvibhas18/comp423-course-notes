@@ -2,7 +2,7 @@
 * Primary Author: [Vibhas Nair](https://github.com/nairvibhas18)
 
 ## Welcome!
-Welcome to this tutorial! Here, you will learn how to create a simple project in the Go 
+Here, you will learn how to create a simple project in the Go 
 programming language. By the end of this tutorial, you will have created a basic Go
 development container and a blank repository to track changes you make to your code.
 
@@ -69,10 +69,10 @@ In the tech industry, complex projects often rely on specific tools and dependen
 Let's create our development container:
 
 ### Step 1: Add Development Container Configuration 
-1. In VS Code, open the `go-setup-tutorial` directory 
+1. In VS Code, open the `go-setup-tutorial` directory. 
 > [!Note]
-> You can do this by clicking File > Open Folder 
-2. Install the **Dev Containers** extension for VS Code by searching for the one made by **Microsoft** in the extensions tab of VS Code
+> You can do this by clicking File > Open Folder. 
+2. Install the **Dev Containers** extension for VS Code by searching for the one made by **Microsoft** in the extensions tab of VS Code.
 3. Create a hidden `.devcontainer` configuration directory in the root of your project with this file inside of it:
 `.devcontainer/devcontainer.json`
 4. Specify environment variables:
@@ -83,7 +83,7 @@ Inside the `devcontainer.json` file we need to specify the configuration of our 
     - **postCreateCommand**: Once the dev container is created, we will run the command defined by postCreateCommand. For us, since this is a simple project, we don't have any necessary dependencies so we will just run `go version` to output the version of Go we have. 
 
 > [!Note]
-> This simple project currently doesn't have any dependencies that we would need to install, but if we did, we would need to create a Go dependency configuration file, like `requirements.txt.` which would be created in the root directory, that would list all of the dependencies we would need for the project. We would then need to install these dependencies after the dev container is created by running a command in the `postCreateCommand` variable. 
+> This simple project currently doesn't have any dependencies that we would need to install, but if we did, we would need to create a Go dependency configuration file, like `requirements.txt.` which would be created in the root directory, that would list all of the dependencies we would need for the project. We would then need to install these dependencies after the dev container is created by specifying a command in the `postCreateCommand` variable. 
 
 ```bash
 {
@@ -103,3 +103,34 @@ Inside the `devcontainer.json` file we need to specify the configuration of our 
 Reopen the project in the container by pressing **Ctrl+Shift+P** (or **Cmd+Shift+P** on Mac), searching for **"Dev Containers: Reopen in Container,"** and selecting the option. The setup process may take a few minutes as the Docker image is downloaded. After the dev container setup is complete, close the current terminal tab by clicking the trash can icon, then open a new terminal pane within VS Code to begin working.
 
 ## Part 3: Running Your First Program in Go
+### Step 1: Enable Dependency Tracking for Your Code
+When your code relies on packages from other modules, you manage those dependencies through your project's own module. This module is defined by a `go.mod` file, which keeps track of the modules that provide those packages. The `go.mod` file is stored alongside your code and is included in your source code repository.
+To enable dependency tracking and create a `go.mod` file for your project, run the `go mod init` command and provide the name of your module. This name will serve as the module's path.
+For the purposes of this tutorial, we will just use `example/hello423`:
+```bash
+go mod init example/hello423
+```
+> [!Note]
+> In practice, the module path is usually the repository location where your source code will be hosted. For example, a typical module path might look like `github.com/mymodule`. If you intend to make your module available for others to use, the module path **must** point to a location that Go tools can access to download your module. For our case, however, we will just use e`xample/hello423` to demonstrate a simple example.
+
+### Step 2: Create a Go File and Paste Code
+Create a file in VS Code called `hello423.go` to write your code. Next, paste the following code into your `hello423.go` file and save the file:
+```bash
+package main
+import "fmt"
+func main() {
+    fmt.Println("Hello COMP423!")
+    }
+```
+
+### Step 3: Run Your Code
+Run your code using this command:
+```bash
+go run .
+```
+The output should be Hello COMP423!
+
+Alternatively, 
+
+!!! note "`go run` vs `go build`"
+    The difference is  
