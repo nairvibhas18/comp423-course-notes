@@ -97,7 +97,7 @@ Inside the `devcontainer.json` file we need to specify the configuration of our 
 > [!Note]
 > This simple project currently doesn't have any dependencies that we would need to install, but if we did, we would need to create a Go dependency configuration file, like `requirements.txt.` which would be created in the root directory, that would list all of the dependencies we would need for the project. We would then need to install these dependencies after the dev container is created by specifying a command in the `postCreateCommand` variable. 
 
-```go
+```json
 {
   "name": "Go Dev Container",
   "image": "mcr.microsoft.com/vscode/devcontainers/go:latest",
