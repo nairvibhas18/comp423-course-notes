@@ -40,6 +40,21 @@ git commit -m "Initial commit with README"
     - **Repository Name**: go-setup-tutorial
     - **Description**: "A basic tutorial for setting up a project in the Go programming language."
     - **Visibility**: Public 
-3. Do not initialize the repository with a README, .gitignore, or license.
-4. Click **Create Repository**
+> [!Warning]
+> Do **not** initialize the repository with a README, .gitignore, or license.
+3. Click **Create Repository**
 
+### Step 3: Link your Local Repository to GitHub
+1. Add the GitHub repository as a remote:
+```bash 
+git remote add origin https://github.com/<your-username>/go-setup-tutorial.git
+```
+Replace `your-username` with your GitHub username.
+2. Check your default branch name with the subcommand `git branch`. If it isn't `main`. rename it to `main` using the `git branch -M main` command. Although `master` is used in older versions of `git`, `main` is the standard modern primary branch name.
+3. Push your local commits to the GitHub repository:
+```bash
+git push --set-upstream origin main
+```
+> [!Note]
+> The `-u` short flag also works in the place of `--set-upstream`
+4. In your web browser, refresh your GitHub repository to verify that the commit you made locally has been successfully pushed to the remote repository. You can run `git log` locally to view the commit ID and message, which should match the most recent commit displayed on GitHub. This confirms that your changes have been pushed to the remote repository.
