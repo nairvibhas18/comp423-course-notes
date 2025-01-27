@@ -13,9 +13,13 @@ development container and a blank repository to track changes you make to your c
 
 Before we start, make sure you have:
 - **A GitHub account**: If you don’t have one yet, sign up at [GitHub](https://github.com/).
-- **Git Installed**: [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) if you don't already have it
+
+- **Git Installed**: [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) if you don't already have it.
+
 - **Visual Studio Code (VS Code)**: Download and install it from [here](https://code.visualstudio.com/).
+
 - **Docker Installed**: This is required to run the dev container. Install it [here](https://www.docker.com/products/docker-desktop/).
+
 - **Command-line basics**: Basic command line interface (CLI) commands will be necessary for this tutorial. This [link](https://aws.amazon.com/what-is/cli/#:~:text=A%20command%20line%20interface%20(CLI)%20is%20a%20text%2Dbased,operating%20system%20and%20the%20user.) provides a great tutorial if you need to brush up on your basics.
 
 ## Part 1: Project Setup: Creating the Repository
@@ -153,7 +157,7 @@ go build hello.go
 ```
 The output should similarly be: Hello COMP423!
 
-!!! info 
+!!! info "`go run` vs. `go build`"
     `go run` compiles and executes your Go code in a specified file. This compilation happens in a temporary location, and the resulting executable is not saved. This makes `go run` ideal for testing small programs, quick iterations, or learning Go, as it avoids creating unnecessary binary files.
   
     `go build` compiles the Go code and its dependencies, producing a binary executable file in the current directory. Unlike `go run`, `go build` does not execute the code. It is useful for creating permanent, reusable executables for applications or projects that need to be run repeatedly or distributed. The output file allows you to run the program later without recompiling the source code.
