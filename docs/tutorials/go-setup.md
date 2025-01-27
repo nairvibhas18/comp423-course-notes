@@ -51,8 +51,8 @@ git commit -m "Initial commit with README"
     - **Repository Name**: go-setup-tutorial
     - **Description**: "A basic tutorial for setting up a project in the Go programming language."
     - **Visibility**: Public 
-!!! warning
-    Do **not** initialize the repository with a README, .gitignore, or license.
+    !!! warning
+        Do **not** initialize the repository with a README, .gitignore, or license.
 
 3. Click **Create Repository**
 
