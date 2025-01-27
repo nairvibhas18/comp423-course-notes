@@ -64,7 +64,7 @@ git remote add origin https://github.com/<your-username>/go-setup-tutorial.git
 ```
 Replace `your-username` with your GitHub username.
 
-2. Check your default branch name with the subcommand `git branch`. If it isn't `main`. rename it to `main` using the `git branch -M main` command. Although `master` is used in older versions of `git`, `main` is the standard modern primary branch name.
+2. Check your default branch name with the subcommand `git branch`. If it is not `main`. rename it to `main` using the `git branch -M main` command. Although `master` is used in older versions of `git`, `main` is the standard modern primary branch name.
 
 3. Push your local commits to the GitHub repository:
 ```bash
