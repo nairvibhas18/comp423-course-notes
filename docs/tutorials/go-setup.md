@@ -156,12 +156,12 @@ The output should similarly be: Hello COMP423!
 !!! info "`git run` vs. `git build`"
     `go run` compiles and executes your Go code in a specified file. This compilation happens in a temporary location, and the resulting executable is not saved. This makes `go run` ideal for testing small programs, quick iterations, or learning Go, as it avoids creating unnecessary binary files.
 
-    `go build` compiles the Go source code and its dependencies, producing a binary executable file in the current directory. Unlike `go run`, `go build` does not execute the code. It is useful for creating permanent, reusable executables for applications or projects that need to be run repeatedly or distributed. The output file allows you to run the program later without recompiling the source code.
+    `go build` compiles the Go code and its dependencies, producing a binary executable file in the current directory. Unlike `go run`, `go build` does not execute the code. It is useful for creating permanent, reusable executables for applications or projects that need to be run repeatedly or distributed. The output file allows you to run the program later without recompiling the source code.
 
 ## Step 4: Add Your Changes to VS Code
 1. Stage and commit your changes to your remote repository on GitHub:
 ```bash
-git add .
+git add . 
 git commit -m "Hello423 Code"
 ```
 2. Push your changes: 
